@@ -14,8 +14,8 @@ routers.use('/login', authRouter);
 routers.use('/user', userRouter);
 
 // private routes
-routers.use(authMiddleware.validateToken);
+// routers.use(authMiddleware.validateToken);
 
-routers.use('/categories', categoryRouter);
+routers.use('/categories', authMiddleware.validateToken, categoryRouter);
 
 module.exports = routers;
