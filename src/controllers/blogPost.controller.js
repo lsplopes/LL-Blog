@@ -36,8 +36,30 @@ const getPostsById = async (req, res) => {
   res.status(200).json(result);
 };
 
+const updatePost = async (req, res) => {
+  const { id } = req.params;
+  const { title, content } = req.body;
+
+  const oldPost = await blogPostService.getPostsById(id);
+  if (!oldPost) {
+    const errorOutput = { status: 404, message: 'Post does not exist' };
+    throw errorOutput;
+  }
+
+  if (req.user.id !== oldPost.user.id) {
+    const errorOutput = { status: 401, message: 'Unauthorized user' };
+    throw errorOutput;
+  }
+
+  const isUpdated = await blogPostService.updatePost(id, title, content);
+  console.log('AUIIII', isUpdated);
+  const newPost = await blogPostService.getPostsById(id);
+  res.status(200).json(newPost);
+};
+
 module.exports = {
   createBlogPost,
   getPosts,
   getPostsById,
+  updatePost,
 };

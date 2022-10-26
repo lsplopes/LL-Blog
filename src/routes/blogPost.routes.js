@@ -8,6 +8,8 @@ router.post('/', blogPostMiddleware.validateBlogPost, blogPostController.createB
 
 router.get('/:id', blogPostController.getPostsById);
 
+router.put('/:id', blogPostMiddleware.validateUpdatePost, blogPostController.updatePost);
+
 router.get('/', blogPostController.getPosts);
 
 module.exports = router;
