@@ -2,9 +2,9 @@ const { User } = require('../models');
 const jwtUtil = require('../utils/jwt.util');
 
 const createUser = async ({ displayName, email, password, image }) => {
-  await User.create({ displayName, email, password, image });
+  const dataValues = await User.create({ displayName, email, password, image });
 
-  const dataValues = { displayName, email, image };
+  // const dataValues = { displayName, email, image };
   const token = jwtUtil.createToken(dataValues);
 
   return token;
