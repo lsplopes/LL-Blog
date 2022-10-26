@@ -10,7 +10,13 @@ const getCategories = async () => {
   return result;
 };
 
+const getCategoriesArray = async (array) => {
+  const result = await Category.findAll({ where: { id: array } });
+  return result;
+};
+
 module.exports = {
   createCategory,
   getCategories,
+  getCategoriesArray,
 };

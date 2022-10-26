@@ -4,6 +4,7 @@ const authRouter = require('./auth.routes');
 const userRouter = require('./user.routes');
 const authMiddleware = require('../middlewares/auth.middleware');
 const categoryRouter = require('./category.routes');
+const blogPostRouter = require('./blogPost.routes');
 
 const routers = express.Router();
 
@@ -14,8 +15,9 @@ routers.use('/login', authRouter);
 routers.use('/user', userRouter);
 
 // private routes
-// routers.use(authMiddleware.validateToken);
 
 routers.use('/categories', authMiddleware.validateToken, categoryRouter);
+
+routers.use('/post', authMiddleware.validateToken, blogPostRouter);
 
 module.exports = routers;
