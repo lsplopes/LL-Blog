@@ -1,10 +1,13 @@
-# :construction: README em construção ! :construction:
-<!-- Olá, Tryber!
-Esse é apenas um arquivo inicial para o README do seu projeto.
-É essencial que você preencha esse documento por conta própria, ok?
-Não deixe de usar nossas dicas de escrita de README de projetos, e deixe sua criatividade brilhar!
-:warning: IMPORTANTE: você precisa deixar nítido:
-- quais arquivos/pastas foram desenvolvidos por você; 
-- quais arquivos/pastas foram desenvolvidos por outra pessoa estudante;
-- quais arquivos/pastas foram desenvolvidos pela Trybe.
--->
+# Welcome to my LL Blog Project!
+
+Just to clarify, LL stands for Lucas Lopes!
+
+This project wal part of the Try course I'm taking in Brasil.
+
+This API was created using tool as Node.js and MySQL with Sequelize.
+
+In this project, the folders of sequelize were given by trybe, adding the config.js file and the seeders, just for the tests of the course work fine!
+
+All the Routes, Services, Models, Controllers, Middlewares and Utils were developed by me.
+
+Thanks for seeing my Project!
