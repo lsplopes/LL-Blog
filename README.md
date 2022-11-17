@@ -1,3 +1,20 @@
+PT-BR: 
+# Bem-vindo ao meu projeto LL Blog!
+
+Só para esclarecer, LL significa Lucas Lopes!
+
+Este projeto faz parte do curso TryB que estou cursando.
+
+Esta API foi criada utilizando as ferramentas Node.js e MySQL com Sequelize.
+
+Nesse projeto as pastas do sequelize foram cedidas pelo trybe, acrescentando o arquivo config.js e os seeders, apenas para os testes do curso funcionarem!
+
+Todas as Rotas, Serviços, Modelos, Controladores, Middlewares e Utils foram desenvolvidos por mim.
+
+Obrigado por ver meu projeto!
+
+EN-US:
+
 # Welcome to my LL Blog Project!
 
 Just to clarify, LL stands for Lucas Lopes!
